@@ -13,15 +13,17 @@
 #include <string>
 #include "Actor.hpp"
 #include "Drawable.hpp"
+#include "Point.hpp"
 
 class Entity {
 public:
-    int x, y;
+//    int x, y;
+    Point loc;
     int health;
     int armor;
     std::string name;
     
-    Entity() {};
+    Entity() : loc(0, 0) {};
     Entity * withName(std::string name) {this->name = name; return this; };
     Entity * withHealth(int health) {this->health = health; return this; };
     

@@ -132,8 +132,8 @@ void Map::draw(TCODConsole * con, EntityManager entities)
     std::shared_ptr<Entity> player = world->player;
     
     con->clear();
-    int xShift = std::max(player->x - width / 2, 0);
-    int yShift = std::max(player->y - height / 2, 0);
+    int xShift = std::max(player->loc.x - width / 2, 0);
+    int yShift = std::max(player->loc.y - height / 2, 0);
     for (int x = 0; x < width; x++)
     {
         for (int y = 0; y < height; y++)
@@ -155,8 +155,8 @@ void Map::draw(TCODConsole * con, EntityManager entities)
     for (std::shared_ptr<Entity> entity : entities)
     {
         if (entity->drawable == nullptr) continue;
-        if (_map->isInFov(entity->x, entity->y))
-            entity->drawable->draw(con, entity->x - xShift, entity->y - yShift);
+        if (_map->isInFov(entity->loc.x, entity->loc.y))
+            entity->drawable->draw(con, entity->loc.x - xShift, entity->loc.y - yShift);
     }
     con->flush();
 }

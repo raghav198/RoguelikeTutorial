@@ -16,8 +16,7 @@ int MovementSystem::accept(Message msg)
     std::shared_ptr<Point> dest = std::static_pointer_cast<Point>(msg.data);
     if (!world->locIsBlocked(dest->x, dest->y))
     {
-        msg.sender->x = dest->x;
-        msg.sender->y = dest->y;
+        msg.sender->loc = *dest;
         if (msg.sender == world->player)
             world->recomputeFOV();
     }

@@ -33,42 +33,42 @@ void PlayerActor::act()
     }
     else if (key.vk == TCODK_UP || key.c == 'k')
     {
-        dest = Point(this->owner->x, this->owner->y - 1);
+        dest = this->owner->loc + Point(0, -1); //Point(this->owner->x, this->owner->y - 1);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.vk == TCODK_DOWN || key.c == 'j')
     {
-        dest = Point(this->owner->x, this->owner->y + 1);
+        dest = this->owner->loc + Point(0, 1); //Point(this->owner->x, this->owner->y + 1);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.vk == TCODK_LEFT || key.c == 'h')
     {
-        dest = Point(this->owner->x - 1, this->owner->y);
+        dest = this->owner->loc + Point(-1, 0); //Point(this->owner->x - 1, this->owner->y);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.vk == TCODK_RIGHT || key.c == 'l')
     {
-        dest = Point(this->owner->x + 1, this->owner->y);
+        dest = this->owner->loc + Point(1, 0); //Point(this->owner->x + 1, this->owner->y);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.c == 'y')
     {
-        dest = Point(this->owner->x - 1, this->owner->y - 1);
+        dest = this->owner->loc + Point(-1, -1); //Point(this->owner->x - 1, this->owner->y - 1);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.c == 'u')
     {
-        dest = Point(this->owner->x + 1, this->owner->y - 1);
+        dest = this->owner->loc + Point(1, -1); //Point(this->owner->x + 1, this->owner->y - 1);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.c == 'b')
     {
-        dest = Point(this->owner->x - 1, this->owner->y + 1);
+        dest = this->owner->loc + Point(-1, 1); //Point(this->owner->x - 1, this->owner->y + 1);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else if (key.c == 'n')
     {
-        dest = Point(this->owner->x + 1, this->owner->y + 1);
+        dest = this->owner->loc + Point(1, 1); //Point(this->owner->x + 1, this->owner->y + 1);
         msg = Message::createMessage(MessageType::Move, this->owner, dest);
     }
     else

@@ -50,7 +50,7 @@ public:
     TCODConsole * mapArea;
     void recomputeFOV()
     {
-        map.recomputeFOV(player->x, player->y);
+        map.recomputeFOV(player->loc.x, player->loc.y);
     }
     void addEntity(std::shared_ptr<Entity> e)
     {

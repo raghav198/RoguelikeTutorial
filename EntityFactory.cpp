@@ -16,8 +16,7 @@ std::shared_ptr<Entity> EntityFactory::makePlayer(std::string name)
     player->health = 10;
     player->armor = 0;
     
-    player->x = 200;
-    player->y = 200;
+    player->loc = Point(200, 200);
     
     player->actor = new PlayerActor(player);
     player->drawable = new Drawable(player, '@', TCODColor::red);
@@ -33,8 +32,7 @@ std::shared_ptr<Entity> EntityFactory::genericEnemy(Point loc)
     enemy->health = 5;
     enemy->armor = 1;
     
-    enemy->x = loc.x;
-    enemy->y = loc.y;
+    enemy->loc = loc;
     
     enemy->actor = nullptr;
     enemy->drawable = new Drawable(enemy, 'o', TCODColor::chartreuse, TCODColor::black);

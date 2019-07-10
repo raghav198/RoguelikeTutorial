@@ -29,11 +29,11 @@ void Engine::setupMap()
     
    /* player = EntityFactory::makePlayer("Raghav");
     TCODRandom * rand = TCODRandom::getInstance();
-    while(this->map.getTileAt(player->x, player->y).blocked)
+    while(this->map.getTileAt(player->loc.x, player->loc.y).blocked)
     {
-        std::cout << Point(player->x, player->y) << " was blocked\n";
-        player->x = rand->get(0, 600);
-        player->y = rand->get(0, 600);
+        std::cout << player->loc << " was blocked\n";
+        player->loc.x = rand->get(0, 600);
+        player->loc.y = rand->get(0, 600);
     }
     this->entities.push_back(player);
     
