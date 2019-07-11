@@ -26,7 +26,7 @@ void Engine::setupMap()
     mapGen->generate();
     mapGen->apply(this->map);
     
-    player = EntityFactory::makePlayer("Raghav");
+   /* player = EntityFactory::makePlayer("Raghav");
     TCODRandom * rand = TCODRandom::getInstance();
     while(this->map.getTileAt(player->x, player->y).blocked)
     {
@@ -36,7 +36,20 @@ void Engine::setupMap()
     }
     this->entities.push_back(player);
     
-    this->recomputeFOV();
+    this->recomputeFOV();*/
+}
+
+void Engine::setupEntities()
+{
+	player = EntityFactory::makePlayer("Raghav");
+	TCODRandom * rand = TCODRandom::getInstance();
+	while (this->map.getTileAt(player->x, player->y).blocked)
+	{
+		player->x = rand->get(0, 600);
+		player->y = rand->get(0, 600);
+	}
+	this->addEntity(player);
+	this->recomputeFOV();
 }
 
 void Engine::setupSystems()
@@ -76,6 +89,11 @@ void Engine::frame()
 Tile Engine::getTileAt(int x, int y)
 {
     return this->map.getTileAt(x, y);
+}
+
+bool Engine::locIsBlocked(int x, int y)
+{
+	return this->getTileAt(x, y).blocked || this->entities.blockingEntitiesAtLoc(Point(x, y));
 }
 
 void Engine::createSystem(std::string name, std::shared_ptr<ISystem> system)

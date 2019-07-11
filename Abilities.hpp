@@ -6,8 +6,10 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Abilities_hpp
-#define Abilities_hpp
+//#ifndef Abilities_hpp
+//#define Abilities_hpp
+
+#pragma once
 
 class Ability {
 public:
@@ -15,4 +17,4 @@ public:
     virtual int weight() = 0;
 };
 
-#endif /* Abilities_hpp */
+//#endif /* Abilities_hpp */

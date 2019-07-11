@@ -123,7 +123,7 @@ Tile Map::getTileAt(int x, int y)
 }
 
 
-void Map::draw(TCODConsole * con, std::vector<std::shared_ptr<Entity>> entities)
+void Map::draw(TCODConsole * con, EntityManager entities)
 {
     const int width = con->getWidth();
     const int height = con->getHeight();

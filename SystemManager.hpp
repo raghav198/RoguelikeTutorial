@@ -10,6 +10,7 @@
 #define SystemManager_hpp
 
 #include "ISystem.hpp"
+#include "Engine.hpp"
 #include <map>
 #include <memory>
 

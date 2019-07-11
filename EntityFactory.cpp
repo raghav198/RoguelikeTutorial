@@ -20,7 +20,7 @@ std::shared_ptr<Entity> EntityFactory::makePlayer(std::string name)
     player->y = 200;
     
     player->actor = new PlayerActor(player);
-    player->drawable = new Drawable(player, '@', TCODColor::red, TCODColor::black);
+    player->drawable = new Drawable(player, '@', TCODColor::red);
     
     return player;
 }

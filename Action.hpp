@@ -6,8 +6,10 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Action_hpp
-#define Action_hpp
+//#ifndef Action_hpp
+//#define Action_hpp
+
+#pragma once
 
 #include "Point.hpp"
 
@@ -32,4 +34,4 @@ struct Action {
     Action(ActionType type, SystemAction action) : type(type), action(action) {}
 };
 
-#endif /* Action_hpp */
+//#endif /* Action_hpp */

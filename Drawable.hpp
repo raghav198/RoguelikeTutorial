@@ -10,18 +10,28 @@
 #define Drawable_hpp
 
 #include "Component.hpp"
+// #include "Engine.hpp"
 #include <libtcod.hpp>
+
+extern Engine * world;
 
 class Drawable : public Component {
 private:
     char display;
+	bool transparent;
     TCODColor foreground;
     TCODColor background;
 public:
-    Drawable(std::shared_ptr<Entity> e, char d, TCODColor f, TCODColor b) : Component(e), display(d), foreground(f), background(b) {}
+    Drawable(std::shared_ptr<Entity> e, char d, TCODColor f, TCODColor b) :
+		Component(e), display(d), foreground(f), background(b), transparent(false) {}
+	Drawable(std::shared_ptr<Entity> e, char d, TCODColor f) : 
+		Component(e), display(d), foreground(f), background(0, 0, 0), transparent(true) {}
     void draw(TCODConsole * con, int x, int y)
     {
-        con->putCharEx(x, y, display, foreground, background);
+		if (transparent);
+			// con->putCharEx(x, y, display, foreground, world->getTileAt(x, y).background);
+		else
+			con->putCharEx(x, y, display, foreground, background);
     }
 };
 

@@ -14,6 +14,7 @@
 
 #include "Rectangle.hpp"
 #include "Entity.hpp"
+#include "EntityManager.hpp"
 
 template <class T>
 using matrix = std::vector<std::vector<T>>;
@@ -104,7 +105,7 @@ public:
     void placeBroken(Rectangle, Tile, float);
     void dig(Point, Point, Tile);
     Tile getTileAt(int, int);
-    void draw(TCODConsole *, std::vector<std::shared_ptr<Entity>>);
+    void draw(TCODConsole *, EntityManager);
 };
 
 #endif /* Map_hpp */

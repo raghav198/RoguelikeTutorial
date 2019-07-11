@@ -14,6 +14,7 @@
 #include <map>
 
 #include "Entity.hpp"
+#include "EntityManager.hpp"
 #include "Map.hpp"
 #include "ISystem.hpp"
 
@@ -24,15 +25,17 @@
 class Engine {
     friend class ISystem;
 private:
-    std::vector<std::shared_ptr<Entity>> entities;
+    // std::vector<std::shared_ptr<Entity>> entities;
     std::map<std::string, std::shared_ptr<ISystem>> systems;
     
     Map map;
+	EntityManager entities;
     
     std::shared_ptr<ISystem> getSystem(std::string);
     void createSystem(std::string, std::shared_ptr<ISystem>);
     
     void setupMap();
+	void setupEntities();
     void setupSystems();
     void setupConsole();
     
@@ -40,6 +43,7 @@ public:
     std::shared_ptr<Entity> player;
     void frame();
     bool running;
+	bool locIsBlocked(int, int);
     void publish(Message);
     Tile getTileAt(int, int);
     void recomputeFOV()
@@ -48,11 +52,13 @@ public:
     }
     void addEntity(std::shared_ptr<Entity> e)
     {
-        this->entities.push_back(e);
+        // this->entities.push_back(e);
+		this->entities.addEntity(e);
     }
     void setup()
     {
         setupMap();
+		setupEntities();
         setupSystems();
         setupConsole();
         running = true;

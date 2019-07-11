@@ -12,6 +12,7 @@
 #include "Entity.hpp"
 #include "Point.hpp"
 #include <vector>
+#include <iterator>
 
 class EntityManager {
 private:
@@ -22,6 +23,11 @@ public:
     {
         entities.push_back(e);
     }
+
+	auto begin() { return entities.begin(); }
+	auto end() { return entities.end(); }
+
+
 };
 
 #endif /* EntityManager_hpp */
