@@ -108,10 +108,6 @@ public:
     void draw(TCODConsole *, std::vector<std::shared_ptr<Entity>>);
     
     bool fov(int x, int y) { return _map->isInFov(x, y); }
-<<<<<<< HEAD
-
-=======
->>>>>>> switched map drawing to its own system
 };
 
 #endif /* Map_hpp */
