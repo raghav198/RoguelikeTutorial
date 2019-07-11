@@ -14,21 +14,20 @@
 #include "Actor.hpp"
 #include "Drawable.hpp"
 #include "Point.hpp"
+#include "Destructible.hpp"
 
 class Entity {
 public:
 //    int x, y;
     Point loc;
-    int health;
-    int armor;
     std::string name;
     
     Entity() : loc(0, 0) {};
-    Entity * withName(std::string name) {this->name = name; return this; };
-    Entity * withHealth(int health) {this->health = health; return this; };
     
     Actor * actor;
     Drawable * drawable;
+    Destructible * destructible;
+    
     
 };
 
