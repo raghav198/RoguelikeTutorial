@@ -17,6 +17,7 @@
 #include "EntityManager.hpp"
 #include "Map.hpp"
 #include "ISystem.hpp"
+#include "Rendering.hpp"
 
 
 
@@ -46,6 +47,7 @@ public:
 	bool locIsBlocked(int, int);
     void publish(Message);
     Tile getTileAt(int, int);
+    TCODConsole * mapArea;
     void recomputeFOV()
     {
         map.recomputeFOV(player->x, player->y);
@@ -63,6 +65,7 @@ public:
         setupConsole();
         running = true;
     }
+    void drawMap() { recomputeFOV(); map.draw(mapArea, entities); }
 };
 
 #endif /* Engine_hpp */

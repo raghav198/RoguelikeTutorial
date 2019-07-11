@@ -22,5 +22,10 @@ int MessageDispatcherSystem::accept(Message msg)
         std::shared_ptr<ISystem> globalSys = this->lookup("global");
         globalSys->accept(msg);
     }
+    else if (msg.type == MessageType::Render)
+    {
+        std::shared_ptr<ISystem> displaySys = this->lookup("display");
+        displaySys->accept(msg);
+    }
     return 0;
 }

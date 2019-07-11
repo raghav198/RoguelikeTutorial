@@ -15,12 +15,18 @@
 enum MessageType {
     Move,
     Attack,
+    Render,
     Global // things like fullscreen, inventory, etc.
 };
 
 enum GlobalMessageType {
     Empty,
     Quit
+};
+
+struct DisplayInfo {
+    std::shared_ptr<Entity> source;
+    TCODConsole * con;
 };
 
 struct Message {

@@ -105,7 +105,10 @@ public:
     void placeBroken(Rectangle, Tile, float);
     void dig(Point, Point, Tile);
     Tile getTileAt(int, int);
-    void draw(TCODConsole *, EntityManager);
+    void draw(TCODConsole *, std::vector<std::shared_ptr<Entity>>);
+    
+    bool fov(int x, int y) { return _map->isInFov(x, y); }
+
 };
 
 #endif /* Map_hpp */

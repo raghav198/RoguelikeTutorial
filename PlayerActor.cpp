@@ -16,35 +16,12 @@
 
 extern Engine * world;
 
-// old_act()
-//{
-//    TCOD_key_t key;
-//    TCODSystem::checkForEvent(TCOD_KEY_PRESSED, &key, NULL);
-//    if (key.vk == TCODK_ESCAPE)
-//    {
-//        return Action(SYSTEM, EXIT);
-//    }
-//    else if (key.vk == TCODK_UP)
-//    {
-//        return Action(MOVE, Point(0, -1));
-//    }
-//    else if (key.vk == TCODK_DOWN)
-//    {
-//        return Action(MOVE, Point(0, 1));
-//    }
-//    else if (key.vk == TCODK_RIGHT)
-//    {
-//        return Action(MOVE, Point(1, 0));
-//    }
-//    else if (key.vk == TCODK_LEFT)
-//    {
-//        return Action(MOVE, Point(-1, 0));
-//    }
-//    return Action(MOVE, Point(0, 0));
-//}
-
 void PlayerActor::act()
 {
+    
+    Message doDraw = Message::createMessage(MessageType::Render, this->owner, this->owner);
+    world->publish(doDraw);
+    
     TCOD_key_t key;
     TCODSystem::waitForEvent(TCOD_KEY_PRESSED, &key, NULL, true);
 
