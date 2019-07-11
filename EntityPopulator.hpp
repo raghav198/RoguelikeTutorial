@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef EntityPopulator_hpp
-#define EntityPopulator_hpp
+#pragma once
 
 #include "Rectangle.hpp"
 #include "EntityManager.hpp"
@@ -19,5 +18,3 @@ public:
     EntityPopulator(Rectangle roi, EntityManager& manager) : roi(roi), manager(manager) {}
     void populate();
 };
-
-#endif /* EntityPopulator_hpp */

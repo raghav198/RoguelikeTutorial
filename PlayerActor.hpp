@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef PlayerActor_hpp
-#define PlayerActor_hpp
+#pragma once
 
 #include "Actor.hpp"
 
@@ -18,5 +17,3 @@ public:
     virtual void act();
     PlayerActor(std::shared_ptr<Entity> owner) : Actor(owner) {}
 };
-
-#endif /* PlayerActor_hpp */

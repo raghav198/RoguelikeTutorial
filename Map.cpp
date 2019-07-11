@@ -10,6 +10,7 @@
 #include "Rectangle.hpp"
 #include "Point.hpp"
 #include "Engine.hpp"
+#include "Drawable.hpp"
 
 extern Engine * world;
 

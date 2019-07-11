@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Destructible_hpp
-#define Destructible_hpp
+#pragma once
 
 #include "Component.hpp"
 #include <libtcod.hpp>
@@ -22,5 +21,3 @@ public:
     Destructible(std::shared_ptr<Entity> owner, int hp, int armor, int evasion) : Component(owner), maxHP(hp), HP(hp), AC(armor), EV(evasion) {}
     
 };
-
-#endif /* Destructible_hpp */

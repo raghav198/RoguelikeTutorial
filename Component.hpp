@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Component_hpp
-#define Component_hpp
+#pragma once
 
 #include <memory>
 
@@ -18,5 +17,3 @@ protected:
 public:
     Component(std::shared_ptr<Entity> owner) : owner(owner) {}
 };
-
-#endif /* Component_hpp */

@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef CityMapGenerator_hpp
-#define CityMapGenerator_hpp
+#pragma once
 
 #include<vector>
 #include "Rectangle.hpp"
@@ -24,4 +23,3 @@ struct CityMapGenerator : MapGenerator {
     virtual void apply(Map&);
 };
 
-#endif /* CityMapGenerator_hpp */

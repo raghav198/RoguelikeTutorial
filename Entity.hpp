@@ -6,15 +6,16 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Entity_hpp
-#define Entity_hpp
-
+#pragma once
 
 #include <string>
-#include "Actor.hpp"
-#include "Drawable.hpp"
+
 #include "Point.hpp"
-#include "Destructible.hpp"
+
+
+class Drawable;
+class Actor;
+class Destructible;
 
 class Entity {
 public:
@@ -30,5 +31,3 @@ public:
     
     
 };
-
-#endif /* Entity_hpp */

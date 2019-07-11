@@ -6,9 +6,9 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Message_hpp
-#define Message_hpp
+#pragma once
 
+#include <libtcod.hpp>
 #include "Entity.hpp"
 #include <memory>
 
@@ -44,8 +44,3 @@ struct Message {
         return msg;
     }
 };
-
-
-
-
-#endif /* Message_hpp */

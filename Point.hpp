@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Point_hpp
-#define Point_hpp
+#pragma once
 
 #include<iostream>
 
@@ -38,5 +37,3 @@ struct Point {
         return a.x != b.x || a.y != b.y;
     }
 };
-
-#endif /* Point_hpp */

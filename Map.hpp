@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Map_hpp
-#define Map_hpp
+#pragma once
 
 #include<vector>
 #include <libtcod.hpp>
@@ -105,9 +104,7 @@ public:
     void placeBroken(Rectangle, Tile, float);
     void dig(Point, Point, Tile);
     Tile getTileAt(int, int);
-    void draw(TCODConsole *, std::vector<std::shared_ptr<Entity>>);
+    void draw(TCODConsole *, EntityManager);
     
     bool fov(int x, int y) { return _map->isInFov(x, y); }
 };
-
-#endif /* Map_hpp */

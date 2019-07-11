@@ -15,6 +15,7 @@
 #include "MessageDispatcherSystem.hpp"
 #include "GlobalCommandSystem.hpp"
 #include "DisplaySystem.hpp"
+#include "Actor.hpp"
 
 #include <memory>
 
@@ -44,10 +45,10 @@ void Engine::setupEntities()
 {
 	player = EntityFactory::makePlayer("Raghav");
 	TCODRandom * rand = TCODRandom::getInstance();
-	while (this->map.getTileAt(player->x, player->y).blocked)
+	while (this->map.getTileAt(player->loc.x, player->loc.y).blocked)
 	{
-		player->x = rand->get(0, 600);
-		player->y = rand->get(0, 600);
+		player->loc.x = rand->get(0, 600);
+		player->loc.y = rand->get(0, 600);
 	}
 	this->addEntity(player);
 	this->recomputeFOV();

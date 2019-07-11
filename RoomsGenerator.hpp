@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef RoomsGenerator_hpp
-#define RoomsGenerator_hpp
+#pragma once
 
 #include "MapGenerator.hpp"
 #include "Map.hpp"
@@ -57,6 +56,3 @@ struct RoomGenerator : MapGenerator {
     virtual void generate();
     virtual void apply(Map&);
 };
-
-
-#endif /* RoomsGenerator_hpp */

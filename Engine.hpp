@@ -68,4 +68,4 @@ public:
     void drawMap() { recomputeFOV(); map.draw(mapArea, entities); }
 };
 
-#endif /* Engine_hpp */
+#endif

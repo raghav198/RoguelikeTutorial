@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef MessageDispatcherSystem_hpp
-#define MessageDispatcherSystem_hpp
+#pragma once
 
 #include "ISystem.hpp"
 
@@ -17,5 +16,3 @@ class MessageDispatcherSystem : public ISystem {
 public:
     virtual int accept(Message);
 };
-
-#endif /* MessageDispatcherSystem_hpp */

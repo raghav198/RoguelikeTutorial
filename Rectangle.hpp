@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Rectangle_hpp
-#define Rectangle_hpp
+#pragma once
 
 #include "Point.hpp"
 #include <iterator>
@@ -73,5 +72,3 @@ struct Rectangle {
         return RectangleIterator(Point(this->p1.x, this->p2.y + 1), this->shape());
     }
 };
-
-#endif /* Rectangle_hpp */

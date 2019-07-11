@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Rendering_hpp
-#define Rendering_hpp
+#pragma once
 
 #include "Map.hpp"
 #include "Point.hpp"
@@ -17,6 +16,3 @@
 // The raw pointer here is okay because we are guaranteed to not mess with it
 // And it makes passing TCODConsole::root easier (don't want to manage that since TCOD manages it)
 void DrawMap(TCODConsole *, Map, Point);
-
-
-#endif /* Rendering_hpp */

@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef MeleeAttackAbility_hpp
-#define MeleeAttackAbility_hpp
+#pragma once
 
 #include "Abilities.hpp"
 
@@ -15,5 +14,3 @@ class MeleeAttackAbility : public Ability {
 public:
     
 };
-
-#endif /* MeleeAttackAbility_hpp */

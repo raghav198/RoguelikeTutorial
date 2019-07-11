@@ -8,6 +8,11 @@
 
 #include "EntityFactory.hpp"
 #include "PlayerActor.hpp"
+#include "Drawable.hpp"
+#include "Destructible.hpp"
+#include "PlayerActor.hpp"
+
+#include <libtcod.hpp>
 
 std::shared_ptr<Entity> EntityFactory::makePlayer(std::string name)
 {

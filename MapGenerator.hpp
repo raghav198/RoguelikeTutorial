@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef MapGenerator_hpp
-#define MapGenerator_hpp
+#pragma once
 
 #include "Rectangle.hpp"
 #include "Map.hpp"
@@ -20,5 +19,3 @@ struct MapGenerator {
     
     MapGenerator(Rectangle roi) : roi(roi) {}
 };
-
-#endif /* MapGenerator_hpp */

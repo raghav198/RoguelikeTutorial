@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef EntityManager_hpp
-#define EntityManager_hpp
+#pragma once
 
 #include "Entity.hpp"
 #include "Point.hpp"
@@ -29,5 +28,3 @@ public:
 
 
 };
-
-#endif /* EntityManager_hpp */

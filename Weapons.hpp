@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef Weapons_hpp
-#define Weapons_hpp
+#pragma once
 
 enum MeleeWeaponClass {
     HAND,
@@ -63,5 +62,3 @@ struct RangedWeapon {
     AmmunitionType ammo;
     int damage;
 }
-
-#endif /* Weapons_hpp */

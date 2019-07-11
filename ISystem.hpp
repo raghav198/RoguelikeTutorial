@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef ISystem_hpp
-#define ISystem_hpp
+#pragma once
 
 #include "Message.hpp"
 #include<memory>
@@ -18,5 +17,3 @@ public:
     std::shared_ptr<ISystem> lookup(std::string);
 //    ISystem(std::shared_ptr<Engine> engine) : engine(engine) {}
 };
-
-#endif /* ISystem_hpp */

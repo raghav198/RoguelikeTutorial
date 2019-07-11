@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef MovementSystem_hpp
-#define MovementSystem_hpp
+#pragma once
 
 #include "ISystem.hpp"
 
@@ -15,5 +14,3 @@ class MovementSystem : public ISystem {
 public:
     virtual int accept(Message);
 };
-
-#endif /* MovementSystem_hpp */

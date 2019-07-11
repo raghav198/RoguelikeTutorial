@@ -6,8 +6,7 @@
 //  Copyright © 2019 Malik, Raghav. All rights reserved.
 //
 
-#ifndef BuildingsGenerator_hpp
-#define BuildingsGenerator_hpp
+#pragma once
 
 #include "MapGenerator.hpp"
 #include "Map.hpp"
@@ -44,5 +43,3 @@ struct BuildingsGenerator : MapGenerator {
     virtual void generate();
     virtual void apply(Map&);
 };
-
-#endif /* BuildingsGenerator_hpp */
