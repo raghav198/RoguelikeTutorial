@@ -29,8 +29,7 @@ private:
     // std::vector<std::shared_ptr<Entity>> entities;
     std::map<std::string, std::shared_ptr<ISystem>> systems;
     
-    Map map;
-	EntityManager entities;
+    
     
     std::shared_ptr<ISystem> getSystem(std::string);
     void createSystem(std::string, std::shared_ptr<ISystem>);
@@ -41,6 +40,8 @@ private:
     void setupConsole();
     
 public:
+    Map map;
+    EntityManager entities;
     std::shared_ptr<Entity> player;
     void frame();
     bool running;

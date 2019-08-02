@@ -17,7 +17,7 @@ class EntityManager {
 private:
     std::vector<std::shared_ptr<Entity>> entities;
 public:
-    bool blockingEntitiesAtLoc(Point);
+    std::shared_ptr<Entity> blockingEntitiesAtLoc(Point);
     void addEntity(std::shared_ptr<Entity> e)
     {
         entities.push_back(e);

@@ -20,4 +20,6 @@ private:
 public:
     Destructible(std::shared_ptr<Entity> owner, int hp, int armor, int evasion) : Component(owner), maxHP(hp), HP(hp), AC(armor), EV(evasion) {}
     
+    virtual void takeDamage(int);
+    
 };

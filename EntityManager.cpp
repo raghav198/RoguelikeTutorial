@@ -8,13 +8,13 @@
 
 #include "EntityManager.hpp"
 
-bool EntityManager::blockingEntitiesAtLoc(Point loc)
+std::shared_ptr<Entity> EntityManager::blockingEntitiesAtLoc(Point loc)
 {
     // naively assume all entities are blocking for now
     for (std::shared_ptr<Entity> e : entities)
     {
         if (e->loc == loc)
-            return true;
+            return e;
     }
-    return false;
+    return nullptr;
 }
